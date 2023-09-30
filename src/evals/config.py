@@ -1,6 +1,8 @@
 from dataclasses import dataclass, fields
 from typing import Optional, Union, Callable
 
+import logging
+
 from omegaconf import DictConfig, OmegaConf
 
 from src.models.base_model import BaseModel
@@ -27,7 +29,9 @@ class EvaluationConfig(BaseEvalConfig):
     dataset_location: str
     prompt_template: Callable
     evaluation_function: Callable
+    output_location: Optional[str] = None
     seed: int = 0
     temperature: float = 0.0
     max_tokens: int = 256
+    logging_level: logging.Level = logging.INFO
     

@@ -1,0 +1,9 @@
+# @package _global_
+dataset_location: TODO
+prompt_template: TODO
+evaluation_function: TODO
+output_location: TODO
+seed: 0
+temperature: 0.0
+max_tokens: 80
+logging_level: logging.DEBUG
